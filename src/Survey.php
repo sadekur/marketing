@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * 
  * @subpackage Survey
  * 
- * @author Corevia <hi@corevia.io>
+ * @author Sadekur Rahman <shadekur.rahman60@gmail.com>
  */
 class Survey {
 	
@@ -31,11 +31,7 @@ class Survey {
 	
 	public function __construct( $plugin, $args = [] ) {
 
-		$this->plugin	= wp_parse_args( $plugin, [
-			'server'		=> 'https://my.corevia.io',
-			'hash_survey'	=> 'a7719b8f-a43b-4c1d-aeb3-2823ef174f54'
-		] );
-
+		$this->plugin 		= $plugin;		
 		$this->plugin_file		= $this->plugin['file'];
 		$this->server			= $this->plugin['server'];
 		$this->hash_survey		= $this->plugin['hash_survey'];
