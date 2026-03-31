@@ -34,7 +34,7 @@ class Survey {
 		$this->plugin 			= $plugin;		
 		$this->plugin_file		= $this->plugin['file'];
 		$this->server			= $this->plugin['server'];
-		$this->hash_survey		= $this->plugin['hash_survey'];
+		$this->hash_survey 		= $this->plugin['hash_survey'] ?? '';
 		$this->activated_key	= "cv-survey_{$this->plugin['TextDomain']}-activated";
 
 		$this->args = wp_parse_args( $args, [

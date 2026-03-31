@@ -35,7 +35,7 @@ class Deactivator {
 
 		$this->plugin 		= $plugin;		
 		$this->server 		= $this->plugin['server'];
-		$this->hash_deactivator = $this->plugin['hash_deactivator'];
+		$this->hash_deactivator = $this->plugin['hash_deactivator'] ?? '';
 		$this->slug 			= $this->plugin['TextDomain'];
 		$this->name 			= $this->plugin['Name'];
 		$this->basename			= plugin_basename( $plugin['basename'] );
