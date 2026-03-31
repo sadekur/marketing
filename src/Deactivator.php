@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * 
  * @subpackage Deactivator
  * 
- * @author Corevia <hi@corevia.io>
+ * @author Sadekur Rahman <shadekur.rahman60@gmail.com>
  */
 class Deactivator {
 
@@ -33,12 +33,8 @@ class Deactivator {
 	
 	public function __construct( $plugin, $args = [] ) {
 
-		$this->plugin	= wp_parse_args( $plugin, [
-			'server'		=> 'https://my.corevia.io',
-			'hash_deactivator'	=> 'a7719b8f-a43b-4c1d-aeb3-2823ef174f54'
-		] );
-
-		$this->server 			= $this->plugin['server'];
+		$this->plugin 		= $plugin;		
+		$this->server 		= $this->plugin['server'];
 		$this->hash_deactivator = $this->plugin['hash_deactivator'];
 		$this->slug 			= $this->plugin['TextDomain'];
 		$this->name 			= $this->plugin['Name'];
