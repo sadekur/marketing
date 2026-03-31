@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * 
  * @subpackage Feature
  * 
- * @author Corevia <hi@corevia.io>
+ * @author Sadekur Rahman <shadekur.rahman60@gmail.com>
  */
 class Feature {
 	
@@ -39,14 +39,7 @@ class Feature {
 
 		$this->args = wp_parse_args( $args, [
 			'server'	=> 'https://my.corevia.io',
-			'featured'	=> [
-				'coschool',
-				'restrict-elementor-widgets',
-				'image-sizes',
-				'wc-affiliate',
-				'woolementor',
-				'easycommerce',
-			],
+			'featured'	=> [],
 			'reserved'	=> [
 				'akismet',
 				'classic-editor',
@@ -90,22 +83,13 @@ class Feature {
 
 		// searching for WooCommerce
 		if ( $searching_wc ) {
-			$this->featured_plugins = [
-				'restrict-elementor-widgets',
-				'woolementor',
-				'wc-affiliate',
-				'easycommerce',
-			];
+			$this->featured_plugins = [];
 			$this->reserved_plugins = [ 'woocommerce' ];
 		}
 
 		// searching for Elementor
 		elseif ( $searching_el ) {
-			$this->featured_plugins = [
-				'restrict-elementor-widgets',
-				'woolementor',
-				'easycommerce',
-			];
+			$this->featured_plugins = [];
 			$this->reserved_plugins = [ 'elementor' ];
 		}
 
@@ -154,7 +138,7 @@ class Feature {
 			}
 		}
 
-		if ( isset( $res->plugins ) && is_array( $res->plugins ) && $plugin_info = get_transient( 'cx-plugin-info-' . $plugin_slug ) ) {
+		if ( isset( $res->plugins ) && is_array( $res->plugins ) && $plugin_info = get_transient( 'cv-plugin-info-' . $plugin_slug ) ) {
 			array_unshift( $res->plugins, $plugin_info );
 		}
 		else {
@@ -173,7 +157,7 @@ class Feature {
 
 			if ( ! is_wp_error( $plugin_info ) ) {
 				$res->plugins[] = $plugin_info;
-				set_transient( 'cx-plugin-info-' . $plugin_slug, $plugin_info, DAY_IN_SECONDS * 7 );
+				set_transient( 'cv-plugin-info-' . $plugin_slug, $plugin_info, DAY_IN_SECONDS * 7 );
 			}
 		}
 

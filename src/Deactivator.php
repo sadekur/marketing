@@ -114,7 +114,7 @@ class Deactivator {
 					e.preventDefault()
 					$('.pl-plugin-deactivation-survey-overlay').css('display', 'flex');
 					$('.pl-plugin-dsm-skip-btn').prop('href', $(this).attr('href'));
-					$('#cxd-plugin-name').val( "<?php echo $this->slug; ?>" );
+					$('#cvd-plugin-name').val( "<?php echo $this->slug; ?>" );
 				} )
 			})
 		</script>
@@ -130,7 +130,7 @@ class Deactivator {
 
 				<div class="pl-plugin-deactivation-survey-form">
 					<form method="post" class="pl-plugin-deactivation-survey-form">
-						<input type="hidden" name="plugin" value="" id="cxd-plugin-name">
+						<input type="hidden" name="plugin" value="" id="cvd-plugin-name">
 						<input type="hidden" name="action" value="pl-plugin-deactivation">
 						<div class="pl-plugin-dsm-header">
 							<h3 class="pl-heading">
