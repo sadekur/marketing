@@ -35,7 +35,7 @@ class Survey {
 		$this->plugin_file		= $this->plugin['file'];
 		$this->server			= $this->plugin['server'];
 		$this->hash_survey		= $this->plugin['hash_survey'];
-		$this->activated_key	= "pl-survey_{$this->plugin['TextDomain']}-activated";
+		$this->activated_key	= "cv-survey_{$this->plugin['TextDomain']}-activated";
 
 		$this->args = wp_parse_args( $args, [
 			'text'		=> sprintf( __( 'Thanks for using <strong>%1$s</strong>!<br />Help us understand the plugin\'s usage on different sites for improved user satisfaction. Share your site URL and basic information (no passwords or sensitive data) to assist our continuous improvement efforts. Will you contribute?', 'corevia' ), $this->plugin['Name'] ),
@@ -68,11 +68,11 @@ class Survey {
 		if( date_i18n( 'U' ) <= get_option( $this->activated_key ) + $this->args['delay'] ) return;
 
 		printf(
-			'<div id="%1$s-survey-notice" class="notice notice-success is-dismissible pl-survey pl-notice pl-shadow" data-slug="%1$s" data-nonce="%5$s">
+			'<div id="%1$s-survey-notice" class="notice notice-success is-dismissible cv-survey cv-notice cv-shadow" data-slug="%1$s" data-nonce="%5$s">
 				<p>%2$s</p>
 				<p>
-					<button class="button button-primary pl-survey-btn" data-participate="1">%3$s</button>
-					<button class="button pl-survey-btn" data-participate="0">%4$s</button>
+					<button class="button button-primary cv-survey-btn" data-participate="1">%3$s</button>
+					<button class="button cv-survey-btn" data-participate="0">%4$s</button>
 				</p>
 			</div>',
 			$this->plugin['TextDomain'],
@@ -85,16 +85,16 @@ class Survey {
 
 	public function admin_footer() {
 
-		if( did_action( 'pl-survey_footer-loaded' ) ) return;
-		do_action( 'pl-survey_footer-loaded' );
+		if( did_action( 'cv-survey_footer-loaded' ) ) return;
+		do_action( 'cv-survey_footer-loaded' );
 		
 		?>
 		<script type="text/javascript">
 			jQuery(function($){
-			    $(document).on('click', '.pl-survey .notice-dismiss, .pl-survey .pl-survey-btn', function(e){
+			    $(document).on('click', '.cv-survey .notice-dismiss, .cv-survey .cv-survey-btn', function(e){
 			        $(this).prop('disabled', true);
-			        var $slug = $(this).closest('.pl-survey').data('slug')
-			        var $nonce = $(this).closest('.pl-survey').data('nonce')
+			        var $slug = $(this).closest('.cv-survey').data('slug')
+			        var $nonce = $(this).closest('.cv-survey').data('nonce')
 			        var $participate = $(this).data('participate');
 			        $.ajax({
 			            url: ajaxurl,
