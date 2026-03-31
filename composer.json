@@ -4,13 +4,13 @@
     "description": "Marketing toolkit for Corevia plugins",
     "version": "0.3",
     "keywords": ["marketing","corevia"],
-    "homepage": "https://bitbucket.org/pluggableio/marketing/",
+    "homepage": "https://sadekurrahman.net",
     "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Corevia",
-            "email": "hi@corevia.io",
-            "homepage": "https://corevia.io",
+            "email": "shadekur.rahman60@gmail.com",
+            "homepage": "https://sadekurrahman.net",
             "role": "Developer"
         }
     ],
