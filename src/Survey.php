@@ -31,7 +31,7 @@ class Survey {
 	
 	public function __construct( $plugin, $args = [] ) {
 
-		$this->plugin 		= $plugin;		
+		$this->plugin 			= $plugin;		
 		$this->plugin_file		= $this->plugin['file'];
 		$this->server			= $this->plugin['server'];
 		$this->hash_survey		= $this->plugin['hash_survey'];
