@@ -1,16 +1,16 @@
 {
-    "name": "pluggable/marketing",
+    "name": "corevia/marketing",
     "type": "library",
-    "description": "Marketing toolkit for Pluggable plugins",
+    "description": "Marketing toolkit for Corevia plugins",
     "version": "0.3",
-    "keywords": ["marketing","pluggable"],
+    "keywords": ["marketing","corevia"],
     "homepage": "https://bitbucket.org/pluggableio/marketing/",
     "license": "GPL-3.0-or-later",
     "authors": [
         {
-            "name": "Pluggable",
-            "email": "hi@pluggable.io",
-            "homepage": "https://pluggable.io",
+            "name": "Corevia",
+            "email": "hi@corevia.io",
+            "homepage": "https://corevia.io",
             "role": "Developer"
         }
     ],

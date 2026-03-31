@@ -1,5 +1,5 @@
 <?php
-namespace Pluggable\Marketing;
+namespace Corevia\Marketing;
 
 /**
  * if accessed directly, exit.
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * 
  * @subpackage Deactivator
  * 
- * @author Pluggable <hi@pluggable.io>
+ * @author Corevia <hi@corevia.io>
  */
 class Deactivator {
 
@@ -34,7 +34,7 @@ class Deactivator {
 	public function __construct( $plugin, $args = [] ) {
 
 		$this->plugin	= wp_parse_args( $plugin, [
-			'server'		=> 'https://my.pluggable.io',
+			'server'		=> 'https://my.corevia.io',
 			'hash_deactivator'	=> 'a7719b8f-a43b-4c1d-aeb3-2823ef174f54'
 		] );
 
@@ -134,9 +134,9 @@ class Deactivator {
 						<input type="hidden" name="action" value="pl-plugin-deactivation">
 						<div class="pl-plugin-dsm-header">
 							<h3 class="pl-heading">
-								<?php printf( __( 'We\'re so sorry to see you go, %s!', 'pluggable' ), $user->display_name ); ?>
+								<?php printf( __( 'We\'re so sorry to see you go, %s!', 'corevia' ), $user->display_name ); ?>
 							</h3>
-							<p class="pl-heading"><?php _e( 'Would you mind telling us why you are deactivating so we can improve it? 🤔', 'pluggable' ) ?></p>
+							<p class="pl-heading"><?php _e( 'Would you mind telling us why you are deactivating so we can improve it? 🤔', 'corevia' ) ?></p>
 						</div>
 						<div class="pl-plugin-dsm-body">
 							<div class="pl-plugin-deactivation-reasons">
@@ -156,11 +156,11 @@ class Deactivator {
 							</div>
 						</div>
 						<div class="pl-plugin-dsm-footer">
-							<a href="" class="button pl-plugin-dsm-skip-btn"><?php _e( 'Skip & Deactivate', 'pluggable' ) ?></a>
+							<a href="" class="button pl-plugin-dsm-skip-btn"><?php _e( 'Skip & Deactivate', 'corevia' ) ?></a>
 							<div class="pl-plugin-dsm-submit">
-								<button class="button pl-plugin-dsm-btn pl-plugin-dsm-close"><?php _e( 'Cancel', 'pluggable' ) ?></button>
+								<button class="button pl-plugin-dsm-btn pl-plugin-dsm-close"><?php _e( 'Cancel', 'corevia' ) ?></button>
 								&nbsp;
-								<button class="button button-primary pl-plugin-dsm-btn pl-plugin-dsm-submit" type="submit"><?php _e( 'Submit & Deactivate', 'pluggable' ) ?></button>
+								<button class="button button-primary pl-plugin-dsm-btn pl-plugin-dsm-submit" type="submit"><?php _e( 'Submit & Deactivate', 'corevia' ) ?></button>
 							</div>
 						</div>
 					</form>

@@ -1,5 +1,5 @@
 <?php
-namespace Pluggable\Marketing;
+namespace Corevia\Marketing;
 
 /**
  * if accessed directly, exit.
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * 
  * @subpackage Survey
  * 
- * @author Pluggable <hi@pluggable.io>
+ * @author Corevia <hi@corevia.io>
  */
 class Survey {
 	
@@ -32,7 +32,7 @@ class Survey {
 	public function __construct( $plugin, $args = [] ) {
 
 		$this->plugin	= wp_parse_args( $plugin, [
-			'server'		=> 'https://my.pluggable.io',
+			'server'		=> 'https://my.corevia.io',
 			'hash_survey'	=> 'a7719b8f-a43b-4c1d-aeb3-2823ef174f54'
 		] );
 
@@ -42,9 +42,9 @@ class Survey {
 		$this->activated_key	= "pl-survey_{$this->plugin['TextDomain']}-activated";
 
 		$this->args = wp_parse_args( $args, [
-			'text'		=> sprintf( __( 'Thanks for using <strong>%1$s</strong>!<br />Help us understand the plugin\'s usage on different sites for improved user satisfaction. Share your site URL and basic information (no passwords or sensitive data) to assist our continuous improvement efforts. Will you contribute?', 'pluggable' ), $this->plugin['Name'] ),
-			'remind'	=> __( 'Remind me later', 'pluggable' ),
-			'button'	=> __( 'Ok, but don\'t bother me again', 'pluggable' ),
+			'text'		=> sprintf( __( 'Thanks for using <strong>%1$s</strong>!<br />Help us understand the plugin\'s usage on different sites for improved user satisfaction. Share your site URL and basic information (no passwords or sensitive data) to assist our continuous improvement efforts. Will you contribute?', 'corevia' ), $this->plugin['Name'] ),
+			'remind'	=> __( 'Remind me later', 'corevia' ),
+			'button'	=> __( 'Ok, but don\'t bother me again', 'corevia' ),
 			'delay'		=> 2 * DAY_IN_SECONDS,
 		] );
 

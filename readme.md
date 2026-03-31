@@ -1,1 +1,1 @@
-## Marketing toolkit for Pluggable plugins
+## Marketing toolkit for Corevia plugins

@@ -1,5 +1,5 @@
 <?php
-namespace Pluggable\Marketing;
+namespace Corevia\Marketing;
 
 /**
  * if accessed directly, exit.
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * 
  * @subpackage Feature
  * 
- * @author Pluggable <hi@pluggable.io>
+ * @author Corevia <hi@corevia.io>
  */
 class Feature {
 	
@@ -38,7 +38,7 @@ class Feature {
 		$this->plugin 	= $plugin;
 
 		$this->args = wp_parse_args( $args, [
-			'server'	=> 'https://my.pluggable.io',
+			'server'	=> 'https://my.corevia.io',
 			'featured'	=> [
 				'coschool',
 				'restrict-elementor-widgets',
